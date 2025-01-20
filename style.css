@@ -7,210 +7,162 @@
 }
 
 body {
-    line-height: 1.8;
-    color: #333;
     background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
     font-size: 16px;
+    margin: 0;
 }
 
-/* Header Styling */
+/* Header */
 header {
     background-color: #ffffff;
+    padding: 1rem 2rem;
     border-bottom: 1px solid #e0e0e0;
-    padding: 1.5rem 1rem;
     position: sticky;
     top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
 }
 
 nav {
-    max-width: 1100px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+nav a {
+    color: #0073e6;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-left: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #005bb5;
 }
 
 .logo {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: bold;
     color: #111;
 }
 
-.nav-links {
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #555;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #0073e6;
-}
-
-/* Main Content Styling */
+/* Main Content */
 main {
-    max-width: 1100px;
+    max-width: 900px;
     margin: 3rem auto;
     padding: 1rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Intro Section */
+/* Introduction Section */
 #intro {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 #intro h1 {
-    font-size: 2.8rem;
-    font-weight: 600;
+    font-size: 2.5rem;
+    font-weight: 700;
     color: #222;
-    margin-bottom: 1rem;
 }
 
-.bio {
+#intro p {
     font-size: 1.2rem;
-    color: #666;
-    line-height: 1.8;
+    color: #555;
     max-width: 700px;
     margin: 0 auto;
+    line-height: 1.8;
 }
 
-/* Section Styling */
-.section {
-    margin-bottom: 4rem;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
+/* Section Titles */
 .section h2 {
     font-size: 2rem;
-    font-weight: 600;
+    margin-bottom: 1rem;
     color: #222;
-    margin-bottom: 1.5rem;
     text-align: center;
+    font-weight: bold;
 }
 
-/* Articles Grid */
-.article-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
+/* Essays Section */
 .article-card {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
     background-color: #ffffff;
     border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .article-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.article-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 0.5rem;
+}
+
+.article-card p {
+    color: #555;
+    margin-bottom: 1rem;
 }
 
 .article-card .date {
     font-size: 0.9rem;
     color: #999;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     font-style: italic;
 }
 
-.article-card h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #222;
-    margin-bottom: 1rem;
-}
-
-.article-card p {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.6;
-}
-
-.read-more {
-    display: inline-block;
-    margin-top: 1rem;
-    color: #0073e6;
-    font-weight: 500;
+.article-card a {
     text-decoration: none;
+    color: #0073e6;
+    font-weight: bold;
     text-transform: uppercase;
     font-size: 0.9rem;
-    letter-spacing: 0.5px;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
-.read-more:hover {
+.article-card a:hover {
     color: #005bb5;
 }
 
-/* Follow Section */
-.follow-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.follow-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.8rem 1rem;
-    background-color: #ffffff;
+/* Reading List Section */
+.reading-item {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
     border-radius: 6px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
+    background-color: #fdfdfd;
 }
 
-.follow-item:hover {
-    background-color: #f0f8ff;
-}
-
-.follow-item .name {
-    font-size: 1rem;
-    font-weight: 600;
+.reading-item h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
     color: #222;
+    margin-bottom: 0.5rem;
 }
 
-.follow-item .handle {
-    font-size: 0.9rem;
+.reading-item p {
     color: #555;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    #intro h1 {
-        font-size: 2.2rem;
-    }
-
-    .section h2 {
-        font-size: 1.7rem;
-    }
-
-    .bio {
-        font-size: 1rem;
-    }
-
-    .article-card {
-        padding: 1rem;
-    }
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    font-size: 0.9rem;
+    color: #777;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 3rem;
 }
